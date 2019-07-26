@@ -1,5 +1,6 @@
 package com.example.bloodbank;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,12 +22,24 @@ public class accept_or_donate extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
        View view =inflater.inflate(R.layout.accept__or__donate,container,false);
        accepter= view.findViewById(R.id.acceptor);
+       donor=view.findViewById(R.id.donor);
+
+
        accepter.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Toast.makeText(getContext(),"Hello Accepter", Toast.LENGTH_LONG).show();
+               Intent i1 =new Intent(getActivity(),acceptor.class);
+               startActivity(i1);
            }
        });
+        donor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 =new Intent(getActivity(),Donor.class);
+
+                startActivity(i2);
+            }
+        });
        return view;
     }
 }

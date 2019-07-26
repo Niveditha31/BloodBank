@@ -36,6 +36,14 @@ public class choose extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
+      /*  Bundle bundle=getIntent().getExtras();
+        String email=bundle.getString("email");*/
+
+           /* Intent i=new Intent(getApplicationContext(),Donor.class);
+            i.putExtra("email", email);
+            startActivity(i);*/
+
+
 
         //acceptor=view.findViewById(R.id.acceptor);
        // donor=view.findViewById(R.id.donor);
